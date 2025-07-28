@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Task Manager</h1>
+            <p>Stay organized and get things done</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="card">
+                <div id="stats-total" class="stat-number">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="card">
+                <div id="stats-active" class="stat-number">0</div>
+                <div class="stat-label">Active Tasks</div>
+            </div>
+            <div class="card">
+                <div id="stats-completed" class="stat-number">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+        </div>
+
+        <div class="card add-task-card">
+            <input type="text" id="new-task-title" placeholder="What needs to be done?">
+            <div class="add-task-actions">
+                <select id="new-task-priority">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button id="add-task-btn">Add Task</button>
+            </div>
+        </div>
+
+        <div class="filter-search-container">
+            <input type="text" id="search-input" placeholder="Search tasks...">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <div id="task-list" class="task-list-container">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
